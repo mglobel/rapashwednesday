@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <% if false # build? %>
+      <script>
+          var host = "rapashwednesday.com";
+          if ((host == window.location.host) && (window.location.protocol != "https:"))
+              window.location.protocol = "https";
+      </script>
+    <% end %>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Ash Wednesday" %></title>
+
+    <%= stylesheet_link_tag :site %>
+
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial 'partials/snippets/tag_manager' if build? %>
+    <%= yield %>
+    <%= javascript_include_tag :all %>
+  </body>
+</html>
