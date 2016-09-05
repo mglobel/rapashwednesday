@@ -49,7 +49,7 @@ configure :build do
   activate :minify_javascript
 
   activate :relative_assets
-  set :relative_links, true
+  set :relative_links, false
 end
 
 activate :deploy do |deploy|
