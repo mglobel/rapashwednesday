@@ -1,10 +1,10 @@
 <%
-  social_icons = content.entries(content_type: 'socialIcons')
+  social_icons = content.entries(content_type: 'socialMedia')
 %>
 <section class='social-icons'>
   <% social_icons.each do |icon| %>
-    <% icon_image = icon.fields[:image] %>
-    <a href="<%= icon.fields[:pageUrl] %>">
+    <% icon_image = icon.fields[:icon] %>
+    <a href="<%= icon.fields[:url] %>">
       <img src="<%= icon_image.image_url %>" title="<%= icon_image.title %>" alt="<%= icon_image.description %>" />
     </a>
   <% end %>

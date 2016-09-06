@@ -8,52 +8,11 @@
 @import "modules/buttons";
 @import "modules/utilities";
 
-
-.welcome {
-  animation-name: welcome;
-  animation-duration: .9s;
-}
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
-
 .container {
   display: flex;
   flex-direction: column;
   section { flex: 1 }
   padding-top: 10rem;
-}
-
-.scripts-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  list-style-type: none;
-  padding-left: 0px;
-  padding: 5rem;
-  font-size: 3.0rem;
-  max-width: 60%;
-  margin: 0 auto;
-
-  .script-pdf {
-    min-height: 60rem;
-  }
 }
 
 body {
@@ -69,15 +28,20 @@ footer {
   padding-bottom: 20px;
 }
 
-canvas {
-  display: flex;
+.album-cover {
+  max-width: 600px;
   margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-svg {
-  width: 100%;
-  height: 100%;
-  max-width: 900px;
+.social-icons {
+  img {
+    background-color: gray;
+    border-radius: 50%;
+    margin: 2rem;
+  }
 }
-
-
